@@ -86,10 +86,10 @@ The script uses the Windows **Shell.Application** COM object to interface with t
 1. Download `Backup-iPhone.ps1`.
 2. Open it in a text editor. You can tweak queue settings if needed:
 
-   ```powershell
+ ```powershell
    $BatchSize = 19        # Files per burst
    $BatchDelaySec = 3     # Pause in seconds
-   ```
+ ```
    
 **3.Запустите в PowerShell:**
 
