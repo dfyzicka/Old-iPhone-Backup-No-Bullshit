@@ -1,5 +1,6 @@
-## <a name="russian"></a>Русский
+**[English](#english) | [Русский](#russian)**
 
+## <a name="russian"></a>Русский
 ### Предыстория
 Дано: **iPhone 7 Plus на 512 ГБ** и **Windows 11**.
 Задача: Скинуть всё медиа (папку DCIM) на комп.
@@ -61,6 +62,7 @@ A: Это файлы метаданных с вашими правками (фи
 ### Disclaimer
 Используйте на свой страх и риск. Скрипт только создает копии ваших файлов. Он ничего не удаляет с исходного устройства.
 
+---
 
 ## <a name="english"></a>English
 
@@ -91,7 +93,7 @@ The script uses the Windows **Shell.Application** COM object to interface with t
    $BatchDelaySec = 3     # Pause in seconds
  ```
    
-**3.Запустите в PowerShell:**
+**3.Run via PowerShell:**
 
   ```
 # Standard run (copies everything including AAE)
@@ -117,12 +119,12 @@ The script uses the Windows **Shell.Application** COM object to interface with t
 | -SkipAAE      | Do not copy .AAE files                       | False                   |
 | -StartFolder  | Start from specific folder (e.g. "105APPLE") | "" (from start)         |
 
-**FAQ
+### FAQ
 Q: Script says "Sent", but folder is empty?
 A: Wait. The script sends commands to the Windows queue. If there are many files, Windows might process them with a delay. Do not disconnect the phone immediately after the script finishes; give it another 5-10 minutes to flush the buffer.
 
 Q: Why do I need .AAE files?
 A: These are metadata files with your edits (filters, crops). They are useless on Windows (PC sees only the original). You can disable copying them with the -SkipAAE flag.
 
-**Disclaimer
+### Disclaimer
 Use at your own risk. This script creates copies of your files. It does not delete anything from the source device.
