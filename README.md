@@ -34,6 +34,9 @@
 # Не копировать мусор .AAE
 .\Backup-iPhone.ps1 -DestRoot "E:\Backup" -SkipAAE
 
+# Если запускаете не первый раз: включить пропуск узе скопированных файлов
+.\Backup-iPhone.ps1 -DestRoot "E:\Backup" -SkipExisting
+
 # Если упало на половине: Начать с папки 105APPLE + пропуск предыдущих
 .\Backup-iPhone.ps1 -DestRoot "E:\Backup" -StartFolder "105APPLE" -SkipExisting
 ```
@@ -43,7 +46,7 @@
 | -PhoneName    | Имя устройства в "Этот компьютер"                 | "Apple iPhone"          |
 | -SourcePath   | Внутренний путь к медиа                           | "Internal Storage\\DCIM" |
 | -DestRoot     | Папка назначения на ПК                            | "E:\\iPhone_Backup"     |
-| -SkipExisting | Пропускать существующие файлы                     | False                   |
+| -SkipExisting | Пропускать уже существующие файлы на диске ПК     | False                   |
 | -SkipAAE      | Не копировать файлы .AAE                          | False                   |
 | -StartFolder  | Имя папки, с которой начать (например "105APPLE") | "" (с начала)           |
 
